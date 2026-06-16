@@ -1,0 +1,43 @@
+/* ============================================================
+   BASE — light reset + sensible defaults bound to tokens.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.ds-root,
+body.ds-body {
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-relaxed);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv01";
+}
+
+::selection { background: rgba(255,255,255,0.18); color: var(--white); }
+
+.ds-display { font-family: var(--font-display); font-weight: var(--fw-regular); line-height: var(--lh-tight); letter-spacing: var(--tracking-display); }
+.ds-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+
+.ds-root :focus-visible,
+body.ds-body :focus-visible {
+  outline: none;
+  box-shadow: var(--glow-focus);
+}
+
+.ds-root ::-webkit-scrollbar { width: 10px; height: 10px; }
+.ds-root ::-webkit-scrollbar-thumb { background: var(--ink-600); border-radius: var(--radius-pill); border: 2px solid transparent; background-clip: padding-box; }
+.ds-root ::-webkit-scrollbar-thumb:hover { background: var(--ink-500); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}

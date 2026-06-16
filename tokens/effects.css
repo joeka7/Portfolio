@@ -1,0 +1,48 @@
+/* ============================================================
+   EFFECTS — glass, gradients, grain, spotlight glows
+   ============================================================ */
+
+:root {
+  /* ---- glassmorphism ---- */
+  --glass-bg:        rgba(18,18,23,0.55);
+  --glass-bg-strong: rgba(14,14,17,0.72);
+  --glass-border:    rgba(255,255,255,0.10);
+  --glass-blur:      blur(16px) saturate(140%);
+  --glass-blur-lg:   blur(28px) saturate(150%);
+
+  /* ---- gradient hairline (premium card edge top→bottom) ---- */
+  --hairline-grad: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02) 40%, rgba(255,255,255,0));
+
+  /* ---- text on light: subtle metallic ink for big display ---- */
+  --ink-gradient: linear-gradient(180deg, #ffffff 0%, #b8b8c0 100%);
+
+  /* ---- spotlight glows (hero ambience) ---- */
+  --spotlight-top:    radial-gradient(60% 50% at 50% 0%, rgba(255,255,255,0.10), rgba(255,255,255,0) 70%);
+  --spotlight-soft:   radial-gradient(40% 40% at 50% 30%, rgba(255,255,255,0.06), rgba(255,255,255,0) 70%);
+  --spotlight-corner: radial-gradient(50% 60% at 100% 0%, rgba(255,255,255,0.07), rgba(255,255,255,0) 60%);
+
+  /* ---- page vignette ---- */
+  --vignette: radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0.04), rgba(0,0,0,0) 45%);
+
+  /* ---- fade scrims ---- */
+  --scrim-bottom: linear-gradient(180deg, rgba(7,7,10,0) 0%, rgba(7,7,10,0.9) 100%);
+  --scrim-top:    linear-gradient(0deg, rgba(7,7,10,0) 0%, rgba(7,7,10,0.9) 100%);
+
+  /* ---- grain ---- */
+  --grain-opacity: 0.035;
+
+  /* ---- dotted / grid backdrops ---- */
+  --dot-grid: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  --dot-size: 22px;
+  --line-grid: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+}
+
+.ds-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: overlay;
+}

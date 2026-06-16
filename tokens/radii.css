@@ -1,0 +1,14 @@
+/* ============================================================
+   RADII — soft, premium, never bubbly
+   ============================================================ */
+
+:root {
+  --radius-none: 0;
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  36px;
+  --radius-pill: 999px;
+}

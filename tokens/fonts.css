@@ -1,0 +1,12 @@
+/* ============================================================
+   FONTS — Youssef Karam Design System
+   ------------------------------------------------------------
+   Geist Sans   → UI / body / workhorse (Vercel-grade grotesk)
+   Geist Mono   → code, labels, technical accents
+   Instrument Serif → oversized editorial display (set BIG, light)
+
+   Loaded from Google Fonts. For production, self-host the woff2
+   binaries and replace these @import lines with @font-face rules.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');

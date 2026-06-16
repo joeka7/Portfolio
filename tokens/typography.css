@@ -1,0 +1,58 @@
+/* ============================================================
+   TYPOGRAPHY
+   ------------------------------------------------------------
+   Display = Instrument Serif, set OVERSIZED and light. Bold
+   editorial presence comes from SCALE + tight leading, not weight.
+   UI/body = Geist. Technical labels = Geist Mono, uppercase,
+   wide tracking.
+   ============================================================ */
+
+:root {
+  /* ---- families ---- */
+  --font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
+  --font-sans:    'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- weights (Geist) ---- */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+
+  /* ---- fluid display scale (serif, clamp for responsiveness) ---- */
+  --text-hero:   clamp(3.5rem, 9vw, 8.5rem);   /* 56 → 136 — hero headline */
+  --text-d1:     clamp(2.75rem, 6vw, 5.25rem); /* 44 → 84  — section opener */
+  --text-d2:     clamp(2.25rem, 4.5vw, 3.5rem);/* 36 → 56  — large title   */
+  --text-d3:     clamp(1.75rem, 3vw, 2.5rem);  /* 28 → 40  — sub-title      */
+
+  /* ---- UI / body scale (sans) ---- */
+  --text-xs:   0.75rem;    /* 12 */
+  --text-sm:   0.875rem;   /* 14 */
+  --text-base: 1rem;       /* 16 */
+  --text-md:   1.125rem;   /* 18 */
+  --text-lg:   1.375rem;   /* 22 */
+  --text-xl:   1.75rem;    /* 28 */
+
+  /* ---- line-heights ---- */
+  --lh-tight:   0.95;
+  --lh-snug:    1.12;
+  --lh-normal:  1.45;
+  --lh-relaxed: 1.65;
+
+  /* ---- letter-spacing ---- */
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.08em;
+  --tracking-label:    0.18em;
+
+  /* ---- semantic roles ---- */
+  --role-eyebrow-font:    var(--font-mono);
+  --role-eyebrow-size:    var(--text-xs);
+  --role-eyebrow-spacing: var(--tracking-label);
+  --role-body-font:       var(--font-sans);
+  --role-body-size:       var(--text-md);
+  --role-body-leading:    var(--lh-relaxed);
+}

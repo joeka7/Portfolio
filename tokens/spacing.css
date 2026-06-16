@@ -1,0 +1,35 @@
+/* ============================================================
+   SPACING — 4px base grid, cinematic at the top end
+   ============================================================ */
+
+:root {
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+  --space-40:  160px;
+  --space-48:  192px;
+
+  /* semantic rhythm */
+  --gap-inline:    var(--space-3);
+  --gap-stack:     var(--space-4);
+  --pad-card:      var(--space-6);
+  --pad-card-lg:   var(--space-8);
+  --section-gap:   clamp(96px, 14vw, 200px);
+  --container-pad: clamp(20px, 5vw, 80px);
+
+  /* layout */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --measure:       66ch;
+}

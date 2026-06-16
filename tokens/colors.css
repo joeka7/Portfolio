@@ -1,0 +1,82 @@
+/* ============================================================
+   COLORS — monochrome, dark-first
+   ------------------------------------------------------------
+   The system is intentionally achromatic. "Accent" is white.
+   Color is expressed through LUMINANCE layering, hairline
+   borders, and faint cool spotlight glows — never hue.
+   ============================================================ */
+
+:root {
+  /* ---- Raw ink scale (near-black → pure white) ---- */
+  --black:        #000000;
+  --ink-950:      #07070a;   /* page floor */
+  --ink-900:      #0a0a0c;   /* base background */
+  --ink-850:      #0e0e11;   /* raised background */
+  --ink-800:      #131317;   /* surface / card */
+  --ink-750:      #18181d;   /* elevated surface */
+  --ink-700:      #1f1f25;   /* hover surface */
+  --ink-600:      #2a2a32;   /* strong border / divider */
+  --ink-500:      #3a3a44;   /* muted line */
+  --ink-400:      #565662;   /* disabled ink */
+  --ink-300:      #7a7a86;   /* tertiary text */
+  --ink-200:      #a1a1ad;   /* secondary text */
+  --ink-100:      #cdcdd4;   /* primary-dim text */
+  --ink-50:       #ededf0;   /* near-white */
+  --white:        #fafafa;   /* primary ink / "accent" */
+  --pure-white:   #ffffff;
+
+  /* ---- Alpha whites (for glass, borders, glows on dark) ---- */
+  --w-02: rgba(255,255,255,0.02);
+  --w-04: rgba(255,255,255,0.04);
+  --w-06: rgba(255,255,255,0.06);
+  --w-08: rgba(255,255,255,0.08);
+  --w-12: rgba(255,255,255,0.12);
+  --w-16: rgba(255,255,255,0.16);
+  --w-24: rgba(255,255,255,0.24);
+  --w-40: rgba(255,255,255,0.40);
+  --w-64: rgba(255,255,255,0.64);
+
+  /* ---- Alpha blacks (scrims, depth) ---- */
+  --b-20: rgba(0,0,0,0.20);
+  --b-40: rgba(0,0,0,0.40);
+  --b-60: rgba(0,0,0,0.60);
+  --b-80: rgba(0,0,0,0.80);
+
+  /* ---- Semantic status (kept desaturated, used sparingly) ---- */
+  --positive: #5fd08a;       /* "available" dot, success */
+  --positive-dim: rgba(95,208,138,0.14);
+  --warning:  #e4c062;
+  --danger:   #e07a6f;
+
+  /* =========================================================
+     SEMANTIC ALIASES — reference these in components
+     ========================================================= */
+
+  /* surfaces */
+  --bg-floor:      var(--ink-950);
+  --bg-base:       var(--ink-900);
+  --bg-raised:     var(--ink-850);
+  --surface:       var(--ink-800);
+  --surface-hi:    var(--ink-750);
+  --surface-hover: var(--ink-700);
+
+  /* text */
+  --text-strong:   var(--white);
+  --text-body:     var(--ink-100);
+  --text-muted:    var(--ink-200);
+  --text-subtle:   var(--ink-300);
+  --text-faint:    var(--ink-400);
+  --text-inverse:  var(--ink-900);
+
+  /* lines */
+  --border:        var(--w-08);
+  --border-strong: var(--w-16);
+  --border-faint:  var(--w-04);
+  --divider:       var(--w-06);
+
+  /* interactive (white = accent) */
+  --accent:          var(--white);
+  --accent-contrast: var(--ink-900);
+  --accent-hover:    var(--pure-white);
+  --focus-ring:      var(--w-40);
+}

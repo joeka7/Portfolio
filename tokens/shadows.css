@@ -1,0 +1,29 @@
+/* ============================================================
+   ELEVATION — on dark, depth is built from:
+     1. a hairline border (catches light at the top edge)
+     2. an inset top highlight (1px white, low alpha)
+     3. a soft, wide ambient drop shadow (near-black)
+   Avoid heavy material shadows; they read muddy on dark.
+   ============================================================ */
+
+:root {
+  /* ambient drop shadows */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.40);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.45);
+  --shadow-md:  0 8px 28px rgba(0,0,0,0.50);
+  --shadow-lg:  0 20px 60px rgba(0,0,0,0.55);
+  --shadow-xl:  0 40px 120px rgba(0,0,0,0.65);
+
+  /* inset top highlight — the "premium glass edge" */
+  --highlight-top:  inset 0 1px 0 rgba(255,255,255,0.08);
+  --highlight-soft: inset 0 1px 0 rgba(255,255,255,0.05);
+
+  /* composed elevations (highlight + ambient) */
+  --elev-card:  var(--highlight-top), var(--shadow-md);
+  --elev-pop:   var(--highlight-top), var(--shadow-lg);
+  --elev-modal: var(--highlight-top), var(--shadow-xl);
+
+  /* white focus glow */
+  --glow-focus: 0 0 0 3px rgba(255,255,255,0.12);
+  --glow-soft:  0 0 40px rgba(255,255,255,0.06);
+}
